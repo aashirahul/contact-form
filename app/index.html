@@ -30,8 +30,8 @@
 
          <input class="button" type="submit" id="submit" value="Submit" ng-disabled="validateForm()"/>
       </form>
-      <ul class ="list"> Messages
-       <li ng-repeat = "form in forms"> {{ form.message }} </li>
+      <ul class ="list"> <span class="title">Messages</span>
+       <li ng-repeat = "form in forms"> <span class="display">Name:</span> {{ form.name }}  <span class="display">Email: </span>{{form.email}}  <span class="display">Website:</span> {{form.website}}<span class="display">Message:</span> {{form.message}}</li>
        </ul>
 
       
