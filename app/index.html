@@ -17,21 +17,25 @@
           <span class="error"> {{ error.name}} </span>
 
         <label class="label"> Email </label>
-          <input class="input is-success" type="text" ng-model = "form.email" ng-keyup = "validateEmail(form.email)">
+          <input class="input" type="text" ng-model = "form.email" ng-keyup = "validateEmail(form.email)">
           <span class="error"> {{ error.email}} </span>
          
         <label class="label"> Website </label>
-          <input class="input is-danger" type="text" ng-model = "form.website" ng-keyup = "validateWebsite(form.website)">
+          <input class="input" type="text" ng-model = "form.website" ng-keyup = "validateWebsite(form.website)">
            <span class="error"> {{ error.website}} </span>
           
         <label class="label"> Message </label>
           <textarea class="textarea"  ng-model = "form.message" ng-keyup = "validateMessage(form.message)" ></textarea>
           <span class="error"> {{ error.message}} </span>
-
-         <input class="button" type="submit" id="submit" value="Submit" ng-disabled="validateForm()"/>
+          
+            <input class="button" type="submit" id="submit" value="Submit" ng-disabled="validateForm()"/>
+          
       </form>
-      <ul class ="list"> <span class="title">Messages</span>
-       <li ng-repeat = "form in forms"> <span class="display">Name:</span> {{ form.name }}  <span class="display">Email: </span>{{form.email}}  <span class="display">Website:</span> {{form.website}}<span class="display">Message:</span> {{form.message}}</li>
+      <ul class ="list"> <span id="title"> Messages
+       <li ng-repeat = "form in forms"> <span class="display">Name:</span> {{ form.name }} 
+        <span class="display">Email:</span> {{form.email}}  
+        <span class="display">Website:</span> {{form.website}}
+        <span class="display">Message:</span> {{form.message}}</li>
        </ul>
 
       
